@@ -1,5 +1,17 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="jumbotron">
+	<h1>ChiFishing <br/> <small>daily weather</small></h1>
+
+</div>	
+<div class="row" ng-repeat="info in weather.txt_forecast.forecastday">
+<div class="col-md-6">
+{{info.title}}
+</div>
+<div class="col-md-6">
+<img src="{{info.icon_url}}" style="float:left;" />
+<p><small>{{info.fcttext}}</small></p>
+</div>
+<hr />
+</div>
+
+
+<pre>{{weather | json}}</pre>
